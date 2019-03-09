@@ -4,11 +4,11 @@ Demonstrates using (calling) FUNCTIONS and using (calling) METHODS:
   -- how they differ.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
-         Aaron Wilkin, their colleagues, and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         Aaron Wilkin, their colleagues, and Emily Millard.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
-# TODO: 2.
+# DONE: 2.
 #   With your instructor, READ the file   methods_vs_functions.txt
 #   in this project, ASKING QUESTIONS as needed to understand its contents.
 #   After you have done so, mark this _TODO_ as DONE
@@ -98,7 +98,7 @@ def draw_many_squares(my_turtle, number_of_squares, size, twist):
         my_turtle.left(twist)
 
 ###############################################################################
-# TODO: 3.
+# DONE: 3.
 #   There are four FUNCTIONS defined ABOVE this:
 #     main
 #     run_example
@@ -136,10 +136,16 @@ def try_methods():
       -- backward  100 units
     """
     ###########################################################################
-    # TODO: 4. Implement and test this function, per its doc-string above.
+    # DONE: 4. Implement and test this function, per its doc-string above.
     #   The testing code (in main) is already written for you.
     ###########################################################################
 
+    first_turtle = rg.SimpleTurtle()
+    first_turtle.pen = rg.Pen('brown', 5)
+    first_turtle.forward(150)
+    first_turtle.left(90)
+    first_turtle.forward(50)
+    first_turtle.backward(100)
 
 ###############################################################################
 # IMPORTANT: Read the NOTE below before you try to implement the next function!
@@ -152,7 +158,7 @@ def try_functions():
      -- One jumps to (-50, 50), then moves (while drawing) to (100, 100)
     """
     ###########################################################################
-    # TODO: 5. Implement and test this function, per its doc-string above.
+    # DONE: 5. Implement and test this function, per its doc-string above.
     #   The testing code (in main) is already written for you.
     #
     #    NOTE: This function requires
@@ -160,6 +166,10 @@ def try_functions():
     #    If you think it needs more, ** ASK FOR HELP. **
     #    HINT: see   jump_and_move_turtle   above.
     ###########################################################################
+
+    jump_and_move_turtle(200, 100, 300, 30)
+    jump_and_move_turtle(100, 200, 0, 0)
+    jump_and_move_turtle(-50, 50, 100, 100)
 
 
 ###############################################################################
@@ -198,7 +208,7 @@ def try_methods_and_functions():
       8. Draw a SQUARE whose sides are each of length 50.
     """
     ###########################################################################
-    # TODO: 6. Implement and test this function, per its doc-string above.
+    # DONE: 6. Implement and test this function, per its doc-string above.
     #   The testing code (in main) is already written for you.
     #
     #   NOTE: This function should ** CALL ** the
@@ -206,6 +216,27 @@ def try_methods_and_functions():
     #   function defined above.  If you don't see why, ** ASK FOR HELP. **
     ###########################################################################
 
+    second_turtle = rg.SimpleTurtle()
+    second_turtle.pen = rg.Pen('blue', 5)
+    second_turtle.backward(150)
+
+    second_turtle.speed = 1
+    draw_many_squares(second_turtle, 2, 100, 30)
+
+    second_turtle.speed = 5
+    second_turtle.pen = rg.Pen('red', 5)
+    draw_many_squares(second_turtle, 10, 50, 15)
+
+    second_turtle.speed = 100
+    second_turtle.pen = rg.Pen('red', 35)
+    draw_many_squares(second_turtle, 8, 300, 60)
+
+    second_turtle.pen = rg.Pen('black', 3)
+    second_turtle.backward(200)
+
+    second_turtle.draw_circle(30)
+
+    second_turtle.draw_square(50)
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
